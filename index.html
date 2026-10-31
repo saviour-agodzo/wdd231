@@ -1,14 +1,77 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 231</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Course home page for WDD 231 Web Frontend Development I.">
+    <meta name="author" content="Your Name">
+    <title>WDD 231 | Course Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+    <script src="scripts/date.js" defer></script>
 </head>
 
 <body>
-    <h1>WDD 231 - AGODZO SAVIOUR GHANA FOOTBALLER</h1>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Course home">
+            <svg class="brand-mark" viewBox="0 0 48 48" role="img" aria-labelledby="logo-title">
+                <title id="logo-title">Course site mark</title>
+                <rect x="2" y="2" width="44" height="44" rx="12" fill="currentColor" />
+                <path d="M13 15h22v4H13zm0 7h22v4H13zm0 7h14v4H13z" fill="#fff" />
+            </svg>
+            <span>Saviour Agodzo</span>
+        </a>
+        <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"
+            aria-controls="primary-nav"><span></span><span></span><span></span></button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+            <a class="active" href="index.html" aria-current="page">Home</a>
+            <a href="chamber/">Chamber</a>
+            <a href="final/">Final</a>
+        </nav>
+    </header>
+    <main>
+        <h1>Home</h1>
+        <div class="content-grid">
+            <section class="panel about-panel">
+                <h2>About Me</h2>
+                <p>Hello! I’m a student learning web frontend development. This page is my WDD 231 course home, where
+                    I’m practicing accessible, responsive design and JavaScript.</p>
+            </section>
+            <section class="panel photo-panel">
+                <h2>Student Photo</h2>
+                <div class="photo-placeholder" role="img" aria-label="Add your student photo here"><span>Add your
+                        photo</span></div>
+            </section>
+            <section class="panel certificate-panel">
+                <h2>Web and Computer Programming Certificate</h2>
+                <div class="filters" role="group" aria-label="Filter courses">
+                    <button type="button" class="filter-button selected" data-filter="all" aria-pressed="true">All
+                        Courses</button>
+                    <button type="button" class="filter-button" data-filter="WDD" aria-pressed="false">WDD
+                        Courses</button>
+                    <button type="button" class="filter-button" data-filter="CSE" aria-pressed="false">CSE
+                        Courses</button>
+                </div>
+                <p id="credit-total" class="credit-total" aria-live="polite"></p>
+                <div id="course-list" class="course-list" aria-live="polite"></div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="social-links" aria-label="Social links">
+            <a href="https://github.com/yourusername" aria-label="GitHub">GitHub</a>
+            <a href="https://www.linkedin.com/in/yourusername/" aria-label="LinkedIn">LinkedIn</a>
+            <a href="https://www.byui.edu/" aria-label="BYU-Idaho">BYU-Idaho</a>
+        </div>
+        <p>© <span id="currentyear"></span> 🌴 Saviour Agodzo 🌴 Ghana </p>
+        <p>Last modified: <span id="lastModified"></span></p>
+    </footer>
 </body>
 
 </html>
