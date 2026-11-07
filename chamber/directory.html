@@ -34,11 +34,17 @@
 <body>
     <header class="site-header">
         <a class="brand" href="../index.html">
-            <img src="images/favicon.svg" width="52" height="52" alt="Coastal Valley Chamber logo">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                <rect width="64" height="64" rx="16" fill="#e2ae4b" />
+                <path d="M12 47h40v5H12zm4-6V25h7v16zm12 0V17h7v24zm12 0V22h7v19zM11 20 32 8l21 12v3H11z"
+                    fill="#102c3a" />
+            </svg>
             <span><strong>Coastal Valley</strong><small>Chamber of Commerce</small></span>
         </a>
         <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
-            aria-controls="primary-nav"><span></span><span></span><span></span></button>
+            aria-controls="primary-nav">
+            <span></span><span></span><span></span>
+        </button>
         <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="discover.html">Discover</a>
@@ -59,10 +65,12 @@
                     <h2 id="directory-heading">Explore local businesses</h2>
                 </div>
                 <div class="view-controls" role="group" aria-label="Choose directory layout">
-                    <button type="button" class="view-button active" data-view="grid" aria-pressed="true"><span
-                            aria-hidden="true">▦</span> Grid</button>
-                    <button type="button" class="view-button" data-view="list" aria-pressed="false"><span
-                            aria-hidden="true">☰</span> List</button>
+                    <button type="button" class="view-button active" data-view="grid" aria-pressed="true">
+                        <span aria-hidden="true">▦</span> Grid
+                    </button>
+                    <button type="button" class="view-button" data-view="list" aria-pressed="false">
+                        <span aria-hidden="true">☰</span> List
+                    </button>
                 </div>
             </div>
             <p id="directory-status" class="status" role="status">Loading member businesses…</p>

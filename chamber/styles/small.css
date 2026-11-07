@@ -42,7 +42,9 @@ a {
     text-decoration: none;
 }
 
-.brand img {
+.brand-mark {
+    width: 52px;
+    height: 52px;
     flex: 0 0 auto;
 }
 
