@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Harbourlight Cooperative",
+        "category": "Food & Agriculture",
+        "address": "14 Market Lane, Coastal Valley",
+        "phone": "+233 30 255 5011",
+        "website": "https://example.com/harbourlight",
+        "image": "harbourlight.svg",
+        "membership": 3,
+        "description": "Community-grown produce and farm supplies."
+    },
+    {
+        "name": "Tideway Business Hotel",
+        "category": "Hospitality",
+        "address": "8 Ocean Road, Coastal Valley",
+        "phone": "+233 30 255 5012",
+        "website": "https://example.com/tideway",
+        "image": "tideway.svg",
+        "membership": 2,
+        "description": "A locally operated hotel and event space."
+    },
+    {
+        "name": "Aster Financial Partners",
+        "category": "Finance",
+        "address": "22 Palm Avenue, Coastal Valley",
+        "phone": "+233 30 255 5013",
+        "website": "https://example.com/aster-financial",
+        "image": "aster.svg",
+        "membership": 3,
+        "description": "Bookkeeping and small business financial support."
+    },
+    {
+        "name": "Greenline Health Clinic",
+        "category": "Health & Wellness",
+        "address": "5 Garden Street, Coastal Valley",
+        "phone": "+233 30 255 5014",
+        "website": "https://example.com/greenline-health",
+        "image": "greenline.svg",
+        "membership": 1,
+        "description": "Primary care and community health services."
+    },
+    {
+        "name": "Northstar Print Studio",
+        "category": "Creative Services",
+        "address": "31 Unity Road, Coastal Valley",
+        "phone": "+233 30 255 5015",
+        "website": "https://example.com/northstar-print",
+        "image": "northstar.svg",
+        "membership": 2,
+        "description": "Print, signage, and brand design for local teams."
+    },
+    {
+        "name": "Cedar & Clay Builders",
+        "category": "Construction",
+        "address": "19 Workshop Close, Coastal Valley",
+        "phone": "+233 30 255 5016",
+        "website": "https://example.com/cedar-clay",
+        "image": "cedar-clay.svg",
+        "membership": 1,
+        "description": "Residential renovation and sustainable building."
+    },
+    {
+        "name": "Brightpath Learning Centre",
+        "category": "Education",
+        "address": "3 School Crescent, Coastal Valley",
+        "phone": "+233 30 255 5017",
+        "website": "https://example.com/brightpath",
+        "image": "brightpath.svg",
+        "membership": 2,
+        "description": "After-school learning and career skills workshops."
+    }
+]
