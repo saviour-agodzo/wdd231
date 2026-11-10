@@ -1,7 +1,7 @@
 const courses = [
-    { subject: "CSE", number: 110, title: "Introduction to Programming", credits: 2, completed: false },
-    { subject: "WDD", number: 130, title: "Web Fundamentals", credits: 2, completed: false },
-    { subject: "CSE", number: 111, title: "Programming with Functions", credits: 2, completed: false },
+    { subject: "CSE", number: 110, title: "Introduction to Programming", credits: 2, completed: true },
+    { subject: "WDD", number: 130, title: "Web Fundamentals", credits: 2, completed: true },
+    { subject: "CSE", number: 111, title: "Programming with Functions", credits: 2, completed: true },
     { subject: "CSE", number: 210, title: "Programming with Classes", credits: 2, completed: false },
     { subject: "WDD", number: 231, title: "Web Frontend Development I", credits: 2, completed: false },
     { subject: "WDD", number: 330, title: "Web Frontend Development II", credits: 3, completed: false }
@@ -12,14 +12,33 @@ const creditTotal = document.querySelector("#credit-total");
 const filterButtons = document.querySelectorAll(".filter-button");
 
 function renderCourses(filter = "all") {
-    const visibleCourses = filter === "all" ? courses : courses.filter((course) => course.subject === filter);
+    const visibleCourses = filter === "all"
+        ? courses
+        : courses.filter((course) => course.subject === filter);
+
     courseList.replaceChildren(...visibleCourses.map((course) => {
         const card = document.createElement("div");
         card.className = `course-card${course.completed ? " completed" : ""}`;
-        card.textContent = `${course.subject} ${course.number}: ${course.title} · ${course.credits} credits`;
+
+        const details = document.createElement("span");
+        details.textContent =
+            `${course.subject} ${course.number}: ${course.title} · ${course.credits} credits`;
+        card.append(details);
+
+        if (course.completed) {
+            const status = document.createElement("span");
+            status.className = "course-status";
+            status.textContent = "✓ Completed";
+            card.append(status);
+        }
+
         return card;
     }));
-    const credits = visibleCourses.reduce((sum, course) => sum + course.credits, 0);
+
+    const credits = visibleCourses.reduce(
+        (sum, course) => sum + course.credits,
+        0
+    );
     creditTotal.textContent = `${visibleCourses.length} courses · ${credits} credits`;
 }
 
@@ -29,6 +48,7 @@ filterButtons.forEach((button) => button.addEventListener("click", () => {
         item.classList.toggle("selected", selected);
         item.setAttribute("aria-pressed", String(selected));
     });
+
     renderCourses(button.dataset.filter);
 }));
 
