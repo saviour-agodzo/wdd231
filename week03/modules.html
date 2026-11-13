@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A course enrollment example built with JavaScript ES modules.">
+    <title>Course Enrollment | WDD 231</title>
+    <link rel="stylesheet" href="styles/modules.css">
+    <script type="module" src="scripts/modules.mjs"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="#main" aria-label="WDD 231 home">WDD <span>231</span></a>
+        <p>Web Frontend Development I</p>
+    </header>
+    <main id="main" class="page">
+        <p class="eyebrow">Learning activity · Week 3</p>
+        <h1 id="course-title">Course enrollment</h1>
+        <p class="intro">Choose a section, then enroll or drop a student to update its enrollment count.</p>
+
+        <section class="controls" aria-labelledby="controls-title">
+            <h2 id="controls-title">Manage enrollment</h2>
+            <label for="sectionNumber">Course section</label>
+            <select id="sectionNumber" name="sectionNumber" aria-label="Choose a course section"></select>
+            <div class="actions">
+                <button id="enrollStudent" type="button">Enroll student</button>
+                <button id="dropStudent" class="secondary" type="button">Drop student</button>
+            </div>
+            <p id="status" class="status" aria-live="polite"></p>
+        </section>
+
+        <section class="section-list" aria-labelledby="sections-heading">
+            <h2 id="sections-heading">Section enrollment</h2>
+            <div id="sections" class="sections"></div>
+        </section>
+    </main>
+    <footer>
+        <p>WDD 231 · JavaScript ES modules</p>
+    </footer>
+</body>
+
+</html>

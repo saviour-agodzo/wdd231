@@ -7,7 +7,7 @@
     --paper: #fff;
     --canvas: #f4f7f5;
     --line: #dce5e1;
-    font-family: 'DM Sans', sans-serif;
+    font-family: "DM Sans", sans-serif;
     color: var(--ink);
     background: var(--canvas);
 }
@@ -54,7 +54,7 @@ a {
 }
 
 .brand strong {
-    font: 800 1.1rem/1.2 'Manrope', sans-serif;
+    font: 800 1.1rem/1.2 "Manrope", sans-serif;
 }
 
 .brand small {
@@ -134,7 +134,7 @@ main {
 h1,
 h2 {
     color: var(--navy);
-    font-family: 'Manrope', sans-serif;
+    font-family: "Manrope", sans-serif;
     line-height: 1.2;
 }
 
@@ -156,9 +156,9 @@ h1 {
 
 .directory-heading {
     display: flex;
-    justify-content: space-between;
-    align-items: end;
-    gap: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .8rem;
     margin-bottom: 1.2rem;
 }
 
@@ -234,7 +234,7 @@ h1 {
 .member-card h3 {
     margin: 0 0 .25rem;
     color: var(--navy);
-    font: 700 1.15rem/1.3 'Manrope', sans-serif;
+    font: 700 1.15rem/1.3 "Manrope", sans-serif;
 }
 
 .category {
@@ -275,15 +275,13 @@ h1 {
 }
 
 .list-view .member-card {
-    display: grid;
-    grid-template-columns: 5.5rem 1fr;
-    align-items: center;
+    display: block;
+    border-left: 5px solid var(--teal);
+    box-shadow: none;
 }
 
 .list-view .member-card img {
-    width: 5.5rem;
-    height: 100%;
-    min-height: 8rem;
+    display: none;
 }
 
 .list-view .member-card-content {
@@ -310,7 +308,7 @@ h1 {
     display: inline-block;
     margin-bottom: .5rem;
     color: white;
-    font: 700 1.1rem 'Manrope', sans-serif;
+    font: 700 1.1rem "Manrope", sans-serif;
     text-decoration: none;
 }
 
