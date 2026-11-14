@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Welcome to the Coastal Valley Chamber of Commerce. Connect with local businesses, community events, and member services.">
+    <meta name="author" content="Saviour Agodzo">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Coastal Valley Chamber of Commerce">
+    <meta property="og:description"
+        content="Connect with local businesses, explore community events, and discover member services in Coastal Valley.">
+    <meta property="og:image" content="https://saviour-agodzo.github.io/wdd231/chamber/images/chamber-share.png">
+    <meta property="og:url" content="https://saviour-agodzo.github.io/wdd231/chamber/index.html">
+    <title>Coastal Valley Chamber of Commerce | Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+    <script src="scripts/spotlights.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Coastal Valley Chamber home">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                <rect width="64" height="64" rx="16" fill="#e2ae4b" />
+                <path d="M12 47h40v5H12zm4-6V25h7v16zm12 0V17h7v24zm12 0V22h7v19zM11 20 32 8l21 12v3H11z"
+                    fill="#102c3a" />
+            </svg>
+            <span><strong>Coastal Valley</strong><small>Chamber of Commerce</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
+            aria-controls="primary-nav"><span></span><span></span><span></span></button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+            <a class="active" href="index.html" aria-current="page">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+    <main class="home-main">
+        <section class="hero" aria-labelledby="hero-title">
+            <img class="hero-image" src="images/coastal-hero.svg" width="1440" height="680"
+                alt="Illustrated coastal town with a harbor, local shops, and green hills">
+            <div class="hero-content">
+                <p class="eyebrow">A thriving community starts here</p>
+                <h1 id="hero-title">Connect. Grow. Thrive.</h1>
+                <p>Building a stronger Coastal Valley through local business and shared opportunity.</p>
+                <a class="join-cta" href="join.html">Join the Chamber <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <div class="home-content-grid">
+            <section class="home-panel events-panel" aria-labelledby="events-title">
+                <div class="home-section-heading">
+                    <p class="eyebrow">Meet, learn, connect</p>
+                    <h2 id="events-title">Community Events</h2>
+                </div>
+                <article class="event-item">
+                    <time class="event-date" datetime="2026-11-20"><span>Nov</span><strong>20</strong></time>
+                    <div>
+                        <h3>Business After Hours</h3>
+                        <p>Meet local business owners and make new connections.</p>
+                        <p class="event-detail">5:30 p.m. · Chamber Hall</p>
+                    </div>
+                </article>
+                <article class="event-item">
+                    <time class="event-date" datetime="2026-11-27"><span>Nov</span><strong>27</strong></time>
+                    <div>
+                        <h3>Small Business Growth Workshop</h3>
+                        <p>Practical ideas for reaching more customers and growing sustainably.</p>
+                        <p class="event-detail">10:00 a.m. · Community Centre</p>
+                    </div>
+                </article>

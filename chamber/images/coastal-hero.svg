@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="680" viewBox="0 0 1440 680" role="img" aria-labelledby="title desc">
+  <title id="title">Coastal Valley community</title>
+  <desc id="desc">An illustrated harbor town between green hills and the sea.</desc>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#8bc6c2"/><stop offset="1" stop-color="#e7d8a8"/></linearGradient>
+    <linearGradient id="water" x2="0" y2="1"><stop stop-color="#3d9a9b"/><stop offset="1" stop-color="#145b67"/></linearGradient>
+  </defs>
+  <rect width="1440" height="680" fill="url(#sky)"/>
+  <circle cx="1120" cy="145" r="75" fill="#f4cb72"/>
+  <path d="M0 370 180 175l170 170 230-230 220 240 205-190 230 205 205-170v250H0z" fill="#497d69"/>
+  <path d="m0 410 220-145 170 150 230-165 235 170 230-145 355 150v170H0z" fill="#285b51"/>
+  <path d="M0 395q180-22 360 8t360 0 360 12 360-4v269H0z" fill="url(#water)"/>
+  <path d="M0 505q210-22 420 0t420 0 420 0 180-4" fill="none" stroke="#b2ded1" stroke-width="8" opacity=".75"/>
+  <path d="M525 390h525v172H525z" fill="#f4eee0"/>
+  <path d="m500 397 287-175 290 175z" fill="#a75f43"/>
+  <path d="M565 426h90v136h-90zm130 0h90v136h-90zm130 0h90v136h-90zm130 0h45v136h-45z" fill="#36716a"/>
+  <path d="M0 565h1440v115H0z" fill="#163e43" opacity=".82"/>
+  <path d="M1050 430h65v132h-65zm75 0h65v132h-65zm-92-26 93-52 92 52z" fill="#e2ae4b"/>
+  <path d="M150 505v95m0-95 85 95m-85-68 62 68" stroke="#f4eee0" stroke-width="8"/>
+</svg>
