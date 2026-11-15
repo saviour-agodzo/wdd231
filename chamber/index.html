@@ -8,12 +8,12 @@
         content="Welcome to the Coastal Valley Chamber of Commerce. Connect with local businesses, community events, and member services.">
     <meta name="author" content="Saviour Agodzo">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Coastal Valley Chamber of Commerce">
+    <meta property="og:title" content="Connect. Grow. Thrive. | Coastal Valley Chamber of Commerce">
     <meta property="og:description"
         content="Connect with local businesses, explore community events, and discover member services in Coastal Valley.">
     <meta property="og:image" content="https://saviour-agodzo.github.io/wdd231/chamber/images/chamber-share.png">
     <meta property="og:url" content="https://saviour-agodzo.github.io/wdd231/chamber/index.html">
-    <title>Coastal Valley Chamber of Commerce | Home</title>
+    <title>Connect. Grow. Thrive. | Coastal Valley Chamber of Commerce</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -25,8 +25,7 @@
     <link rel="stylesheet" href="styles/larger.css">
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
-    <!-- <script src="scripts/weather.js" defer></script> -->
-    <script type="module" src="scripts/weather.js"></script>
+    <script src="scripts/weather.js" defer></script>
     <script src="scripts/spotlights.js" defer></script>
 </head>
 
@@ -40,8 +39,12 @@
             </svg>
             <span><strong>Coastal Valley</strong><small>Chamber of Commerce</small></span>
         </a>
+
         <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
-            aria-controls="primary-nav"><span></span><span></span><span></span></button>
+            aria-controls="primary-nav">
+            <span></span><span></span><span></span>
+        </button>
+
         <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
             <a class="active" href="index.html" aria-current="page">Home</a>
             <a href="discover.html">Discover</a>
@@ -49,6 +52,7 @@
             <a href="join.html">Join</a>
         </nav>
     </header>
+
     <main class="home-main">
         <section class="hero" aria-labelledby="hero-title">
             <img class="hero-image" src="images/coastal-hero.svg" width="1440" height="680"
@@ -67,19 +71,85 @@
                     <p class="eyebrow">Meet, learn, connect</p>
                     <h2 id="events-title">Community Events</h2>
                 </div>
+
                 <article class="event-item">
-                    <time class="event-date" datetime="2026-11-20"><span>Nov</span><strong>20</strong></time>
+                    <time class="event-date" datetime="2026-11-20">
+                        <span>Nov</span><strong>20</strong>
+                    </time>
                     <div>
                         <h3>Business After Hours</h3>
                         <p>Meet local business owners and make new connections.</p>
                         <p class="event-detail">5:30 p.m. · Chamber Hall</p>
                     </div>
                 </article>
+
                 <article class="event-item">
-                    <time class="event-date" datetime="2026-11-27"><span>Nov</span><strong>27</strong></time>
+                    <time class="event-date" datetime="2026-11-27">
+                        <span>Nov</span><strong>27</strong>
+                    </time>
                     <div>
                         <h3>Small Business Growth Workshop</h3>
                         <p>Practical ideas for reaching more customers and growing sustainably.</p>
                         <p class="event-detail">10:00 a.m. · Community Centre</p>
                     </div>
                 </article>
+            </section>
+
+            <section class="home-panel weather-panel" aria-labelledby="weather-title">
+                <div class="home-section-heading">
+                    <p class="eyebrow">Plan your day</p>
+                    <h2 id="weather-title">Local Weather</h2>
+                    <p class="weather-location">Accra, Ghana</p>
+                </div>
+
+                <p id="weather-status" class="weather-status" role="status">
+                    Loading current conditions and forecast…
+                </p>
+
+                <div class="current-weather" aria-live="polite">
+                    <p class="current-temperature">
+                        <span id="current-temperature">--</span>
+                        <span aria-label="degrees Celsius">°C</span>
+                    </p>
+                    <p id="current-description" class="current-description">Current conditions</p>
+                    <p class="feels-like">Feels like <span id="feels-like">--</span>°C</p>
+                </div>
+
+                <h3 class="forecast-heading">Three-Day Forecast</h3>
+                <ul id="weather-forecast" class="forecast-list" aria-label="Three-day temperature forecast"></ul>
+            </section>
+
+            <section class="home-panel spotlights-panel" aria-labelledby="spotlights-title">
+                <div class="home-section-heading">
+                    <p class="eyebrow">Member businesses</p>
+                    <h2 id="spotlights-title">Business Spotlights</h2>
+                    <p>Get to know a few of the businesses that make our community special.</p>
+                </div>
+
+                <p id="spotlights-status" class="spotlights-status" role="status">
+                    Loading chamber members…
+                </p>
+                <div id="spotlight-list" class="spotlight-list" aria-live="polite"></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-contact">
+            <a class="footer-brand" href="index.html">Coastal Valley Chamber</a>
+            <address>
+                100 Market Street<br>
+                Coastal Valley, Ghana<br>
+                <a href="mailto:info@coastalvalleychamber.example">info@coastalvalleychamber.example</a><br>
+                <a href="tel:+233302555010">+233 30 255 5010</a>
+            </address>
+        </div>
+        <div class="footer-meta">
+            <p>© <span id="currentyear"></span> Coastal Valley Chamber</p>
+            <p>Saviour Agodzo | WDD 231</p>
+            <p>Last modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
