@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Apply for Coastal Valley Chamber membership and find the membership level that fits your organization.">
+    <meta name="author" content="Saviour Agodzo">
+    <title>Join the Chamber | Coastal Valley Chamber</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/join.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Coastal Valley Chamber home">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                <rect width="64" height="64" rx="16" fill="#e2ae4b" />
+                <path d="M12 47h40v5H12zm4-6V25h7v16zm12 0V17h7v24zm12 0V22h7v19zM11 20 32 8l21 12v3H11z"
+                    fill="#102c3a" />
+            </svg>
+            <span><strong>Coastal Valley</strong><small>Chamber of Commerce</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
+            aria-controls="primary-nav"><span></span><span></span><span></span></button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a class="active" href="join.html" aria-current="page">Join</a>
+        </nav>
+    </header>
+
+    <main class="join-main">
+        <section class="join-intro" aria-labelledby="join-title">
+            <p class="eyebrow">Build local connections</p>
+            <h1 id="join-title">Become a Chamber Member</h1>
+            <p>Tell us about your organization and choose a membership level to get started.</p>
+        </section>
+
+        <div class="join-layout">
+            <section class="join-form-panel" aria-labelledby="application-title">
+                <h2 id="application-title">Membership Application</h2>
+                <form method="get" action="thankyou.html">
+                    <div class="form-fields">
+                        <label for="first-name">First name
+                            <input id="first-name" name="firstName" type="text" title="Enter your first name"
+                                autocomplete="given-name" required>
+                        </label>
+                        <label for="last-name">Last name
+                            <input id="last-name" name="lastName" type="text" title="Enter your last name"
+                                autocomplete="family-name" required>
+                        </label>
+                        <label for="organization-title">Your title in the organization
+                            <input id="organization-title" name="organizationTitle" type="text"
+                                title="Use at least seven letters, spaces, or hyphens" autocomplete="organization-title"
+                                pattern="[A-Za-z -]{7,}" minlength="7" placeholder="Example: Marketing Director">
+                        </label>
+                        <label for="email">Email address
+                            <input id="email" name="email" type="email" title="Enter a valid email address"
+                                autocomplete="email" placeholder="name@example.com" required>
+                        </label>
+                        <label for="phone">Mobile phone number
+                            <input id="phone" name="phone" type="tel" title="Enter your mobile phone number"
+                                autocomplete="tel" required>
+                        </label>
+                        <label for="organization">Business or organization name
+                            <input id="organization" name="organization" type="text"
+                                title="Enter your business or organization name" autocomplete="organization" required>
+                        </label>

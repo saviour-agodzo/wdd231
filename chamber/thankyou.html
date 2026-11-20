@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Thank you for applying to join the Coastal Valley Chamber of Commerce.">
+    <meta name="author" content="Saviour Agodzo">
+    <title>Application Received | Coastal Valley Chamber</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/thankyou.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Coastal Valley Chamber home">
+            <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+                <rect width="64" height="64" rx="16" fill="#e2ae4b" />
+                <path d="M12 47h40v5H12zm4-6V25h7v16zm12 0V17h7v24zm12 0V22h7v19zM11 20 32 8l21 12v3H11z"
+                    fill="#102c3a" />
+            </svg>
+            <span><strong>Coastal Valley</strong><small>Chamber of Commerce</small></span>
+        </a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
+            aria-controls="primary-nav"><span></span><span></span><span></span></button>
+        <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="discover.html">Discover</a>
+            <a href="directory.html">Directory</a>
+            <a href="join.html">Join</a>
+        </nav>
+    </header>
+    <main class="thankyou-main">
+        <section class="thankyou-panel" aria-labelledby="thankyou-title">
+            <p class="eyebrow">Application received</p>
+            <h1 id="thankyou-title">Thank you for applying</h1>
+            <p>We appreciate your interest in joining the Coastal Valley Chamber. Here is the information you submitted:
+            </p>
+            <dl class="submission-details">
+                <div>
+                    <dt>First name</dt>
+                    <dd id="submitted-first-name"></dd>
+                </div>
+                <div>
+                    <dt>Last name</dt>
+                    <dd id="submitted-last-name"></dd>
+                </div>
+                <div>
+                    <dt>Email</dt>
+                    <dd id="submitted-email"></dd>
+                </div>
+                <div>
+                    <dt>Mobile phone</dt>
+                    <dd id="submitted-phone"></dd>
+                </div>
+                <div>
+                    <dt>Organization</dt>
+                    <dd id="submitted-organization"></dd>
+                </div>
+                <div>
+                    <dt>Application received</dt>
+                    <dd id="submitted-timestamp"></dd>
+                </div>
+                <div>
+                    <dt>Organization title</dt>
+                    <dd id="submitted-title"></dd>
+                </div>
+                <div>
+                    <dt>Membership level</dt>
+                    <dd id="submitted-membership"></dd>
+                </div>
+                <div>
+                    <dt>Organization description</dt>
+                    <dd id="submitted-description"></dd>
+                </div>
+            </dl>
+            <a class="join-cta thankyou-link" href="index.html">Return to Chamber Home</a>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-contact">
+            <a class="footer-brand" href="index.html">Coastal Valley Chamber</a>
+            <address>100 Market Street<br>Coastal Valley, Ghana<br><a
+                    href="mailto:info@coastalvalleychamber.example">info@coastalvalleychamber.example</a><br><a
+                    href="tel:+233302555010">+233 30 255 5010</a></address>
+        </div>
+        <div class="footer-meta">
+            <p>© <span id="currentyear"></span> Coastal Valley Chamber</p>
+            <p>Saviour Agodzo | WDD 231</p>
+            <p>Last modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>

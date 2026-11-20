@@ -62,6 +62,25 @@
         border-top: 0;
         border-left: 1px solid #ffffff35;
     }
+
+    .form-fields {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .form-fields label:nth-child(3),
+    .form-fields label:nth-child(6),
+    .form-fields label:nth-child(8) {
+        grid-column: 1 / -1;
+    }
+
+    .submit-application {
+        width: auto;
+        min-width: 16rem;
+    }
+
+    .membership-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (min-width: 68rem) {
@@ -79,5 +98,15 @@
 
     .grid-view {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .join-layout {
+        grid-template-columns: minmax(0, 1.15fr) minmax(22rem, .85fr);
+        align-items: start;
+        gap: 1.5rem;
+    }
+
+    .membership-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
