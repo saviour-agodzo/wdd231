@@ -7,16 +7,24 @@
     <meta name="description"
         content="Apply for Coastal Valley Chamber membership and find the membership level that fits your organization.">
     <meta name="author" content="Saviour Agodzo">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Join the Coastal Valley Chamber of Commerce">
+    <meta property="og:description"
+        content="Apply for Coastal Valley Chamber membership, compare benefits, and choose the level that fits your organization.">
+    <meta property="og:image" content="https://saviour-agodzo.github.io/wdd231/chamber/images/chamber-share.png">
+    <meta property="og:url" content="https://saviour-agodzo.github.io/wdd231/chamber/join.html">
     <title>Join the Chamber | Coastal Valley Chamber</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@500;600;700;800&amp;display=swap"
         rel="stylesheet">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/larger.css">
+
     <script src="scripts/navigation.js" defer></script>
     <script src="scripts/date.js" defer></script>
     <script src="scripts/join.js" defer></script>
@@ -26,16 +34,23 @@
     <header class="site-header">
         <a class="brand" href="index.html" aria-label="Coastal Valley Chamber home">
             <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
-                <rect width="64" height="64" rx="16" fill="#e2ae4b" />
+                <rect width="64" height="64" rx="16" fill="#e2ae4b"></rect>
                 <path d="M12 47h40v5H12zm4-6V25h7v16zm12 0V17h7v24zm12 0V22h7v19zM11 20 32 8l21 12v3H11z"
-                    fill="#102c3a" />
+                    fill="#102c3a"></path>
             </svg>
-            <span><strong>Coastal Valley</strong><small>Chamber of Commerce</small></span>
+            <span>
+                <strong>Coastal Valley</strong>
+                <small>Chamber of Commerce</small>
+            </span>
         </a>
+
         <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false"
             aria-controls="primary-nav">
-            <span></span><span></span><span></span>
+            <span></span>
+            <span></span>
+            <span></span>
         </button>
+
         <nav id="primary-nav" class="primary-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="discover.html">Discover</a>
@@ -46,170 +61,181 @@
 
     <main class="join-main">
         <section class="join-intro" aria-labelledby="join-title">
-            <p class="eyebrow">Build local connections</p>
+            <p class="eyebrow">Grow with us</p>
             <h1 id="join-title">Become a Chamber Member</h1>
-            <p>Tell us about your organization and choose a membership level to get started.</p>
+            <p>Connect with local businesses, build visibility, and take part in a stronger Coastal Valley community.
+            </p>
         </section>
 
         <div class="join-layout">
+            <section class="membership-options" id="np-benefits" aria-labelledby="membership-title">
+                <div class="membership-heading">
+                    <p class="eyebrow">Membership options</p>
+                    <h2 id="membership-title">Choose the level that fits</h2>
+                    <p>Explore the benefits, then select a membership level in the application.</p>
+                </div>
+
+                <div class="membership-cards">
+                    <article class="membership-card membership-card--np">
+                        <p class="category">Community</p>
+                        <h3>Non-Profit</h3>
+                        <p class="membership-price">No fee <span>for eligible organizations</span></p>
+                        <p>Build local connections and share your organization’s work.</p>
+                        <a class="membership-link" href="#np-benefits" data-dialog="np-dialog">View benefits</a>
+                    </article>
+
+                    <article class="membership-card membership-card--bronze" id="bronze-benefits">
+                        <p class="category">Starter</p>
+                        <h3>Bronze</h3>
+                        <p class="membership-price">$50 <span>per year</span></p>
+                        <p>Get listed in the directory and attend member events.</p>
+                        <a class="membership-link" href="#bronze-benefits" data-dialog="bronze-dialog">View benefits</a>
+                    </article>
+
+                    <article class="membership-card membership-card--silver" id="silver-benefits">
+                        <p class="category">Growth</p>
+                        <h3>Silver</h3>
+                        <p class="membership-price">$150 <span>per year</span></p>
+                        <p>Increase your visibility and access additional networking opportunities.</p>
+                        <a class="membership-link" href="#silver-benefits" data-dialog="silver-dialog">View benefits</a>
+                    </article>
+
+                    <article class="membership-card membership-card--gold" id="gold-benefits">
+                        <p class="category">Leadership</p>
+                        <h3>Gold</h3>
+                        <p class="membership-price">$300 <span>per year</span></p>
+                        <p>Receive premium promotion and expanded community recognition.</p>
+                        <a class="membership-link" href="#gold-benefits" data-dialog="gold-dialog">View benefits</a>
+                    </article>
+                </div>
+            </section>
+
             <section class="join-form-panel" aria-labelledby="application-title">
-                <h2 id="application-title">Membership Application</h2>
+                <p class="eyebrow">Get started</p>
+                <h2 id="application-title">Membership application</h2>
+                <p>Complete the form and we’ll follow up about your application.</p>
+
                 <form method="get" action="thankyou.html">
                     <div class="form-fields">
                         <label for="first-name">First name
-                            <input id="first-name" name="firstName" type="text" title="Enter your first name"
+                            <input type="text" id="first-name" name="firstName" title="Your first name"
                                 autocomplete="given-name" required>
                         </label>
 
                         <label for="last-name">Last name
-                            <input id="last-name" name="lastName" type="text" title="Enter your last name"
+                            <input type="text" id="last-name" name="lastName" title="Your last name"
                                 autocomplete="family-name" required>
                         </label>
 
-                        <label for="organization-title">Your title in the organization
-                            <input id="organization-title" name="organizationTitle" type="text"
-                                title="Use at least seven letters, spaces, or hyphens" autocomplete="organization-title"
-                                pattern="[A-Za-z -]{7,}" minlength="7" placeholder="Example: Marketing Director">
+                        <label for="organization-title">Organizational title
+                            <input type="text" id="organization-title" name="organizationTitle"
+                                title="Your title within the organization" autocomplete="organization-title"
+                                pattern="[A-Za-z\\s\\-]{7,}" required>
                         </label>
 
                         <label for="email">Email address
-                            <input id="email" name="email" type="email" title="Enter a valid email address"
-                                autocomplete="email" placeholder="name@example.com" required>
+                            <input type="email" id="email" name="email" title="Your email address" autocomplete="email"
+                                placeholder="name@example.com" required>
                         </label>
 
-                        <label for="phone">Mobile phone number
-                            <input id="phone" name="phone" type="tel" title="Enter your mobile phone number"
+                        <label for="phone">Mobile phone
+                            <input type="tel" id="phone" name="phone" title="Your mobile phone number"
                                 autocomplete="tel" required>
                         </label>
 
-                        <label for="organization">Business or organization name
-                            <input id="organization" name="organization" type="text"
-                                title="Enter your business or organization name" autocomplete="organization" required>
+                        <label for="organization">Organization name
+                            <input type="text" id="organization" name="organization" title="Your organization’s name"
+                                autocomplete="organization" required>
                         </label>
 
-                        <label for="membership-level">Membership level
-                            <select id="membership-level" name="membershipLevel" title="Choose a membership level"
-                                required>
-                                <option value="" selected disabled>Select a membership level</option>
-                                <option value="np">NP Membership — No fee</option>
-                                <option value="bronze">Bronze Membership</option>
-                                <option value="silver">Silver Membership</option>
-                                <option value="gold">Gold Membership</option>
+                        <label for="membership">Membership level
+                            <select id="membership" name="membership" title="Select a membership level" required>
+                                <option value="" disabled selected>Select a level</option>
+                                <option value="Non-Profit">Non-Profit</option>
+                                <option value="Bronze">Bronze</option>
+                                <option value="Silver">Silver</option>
+                                <option value="Gold">Gold</option>
                             </select>
                         </label>
 
-                        <label for="description">Business or organization description
-                            <textarea id="description" name="description" title="Describe your business or organization"
+                        <label for="description">Organization description
+                            <textarea id="description" name="description" title="Brief description of your organization"
                                 rows="5"></textarea>
                         </label>
 
-                        <input id="timestamp" name="timestamp" type="hidden" value="">
+                        <input type="hidden" id="timestamp" name="timestamp">
                     </div>
-                    <input class="submit-application" type="submit" value="Submit Membership Application">
+
+                    <button class="submit-application" type="submit">Send application</button>
                 </form>
-            </section>
-
-            <section class="membership-section" aria-labelledby="membership-levels-title">
-                <div class="membership-heading">
-                    <p class="eyebrow">Choose your level</p>
-                    <h2 id="membership-levels-title">Membership Benefits</h2>
-                </div>
-                <div class="membership-cards">
-                    <article class="membership-card">
-                        <h3>NP Membership</h3>
-                        <p class="membership-price">No fee</p>
-                        <p>For nonprofit organizations serving our community.</p>
-                        <a href="#np-benefits" class="membership-link" data-modal-target="np-benefits"
-                            aria-haspopup="dialog">View benefits</a>
-                    </article>
-
-                    <article class="membership-card">
-                        <h3>Bronze Membership</h3>
-                        <p class="membership-price">$50 <span>/ year</span></p>
-                        <p>Build visibility and connect with local businesses.</p>
-                        <a href="#bronze-benefits" class="membership-link" data-modal-target="bronze-benefits"
-                            aria-haspopup="dialog">View benefits</a>
-                    </article>
-
-                    <article class="membership-card">
-                        <h3>Silver Membership</h3>
-                        <p class="membership-price">$150 <span>/ year</span></p>
-                        <p>Grow your reach with added training and event savings.</p>
-                        <a href="#silver-benefits" class="membership-link" data-modal-target="silver-benefits"
-                            aria-haspopup="dialog">View benefits</a>
-                    </article>
-
-                    <article class="membership-card">
-                        <h3>Gold Membership</h3>
-                        <p class="membership-price">$300 <span>/ year</span></p>
-                        <p>Make a leading connection with premium promotion.</p>
-                        <a href="#gold-benefits" class="membership-link" data-modal-target="gold-benefits"
-                            aria-haspopup="dialog">View benefits</a>
-                    </article>
-                </div>
             </section>
         </div>
     </main>
 
-    <dialog class="benefit-dialog" id="np-benefits" aria-labelledby="np-title">
-        <button class="dialog-close" type="button" aria-label="Close NP Membership benefits">×</button>
-        <h2 id="np-title">NP Membership Benefits</h2>
-        <p>Nonprofit organizations can join at no cost and receive:</p>
+    <dialog class="benefit-dialog" id="np-dialog" aria-labelledby="np-dialog-title">
+        <button class="dialog-close" type="button" aria-label="Close dialog">×</button>
+        <p class="eyebrow">Non-Profit membership</p>
+        <h2 id="np-dialog-title">Community benefits</h2>
+        <p>Non-Profit members can connect with local businesses and participate in chamber activities.</p>
         <ul>
-            <li>A basic listing in the chamber directory</li>
-            <li>Invitations to community networking events</li>
-            <li>Access to chamber announcements and resources</li>
+            <li>Directory listing</li>
+            <li>Member networking opportunities</li>
+            <li>Eligible for community event participation</li>
         </ul>
     </dialog>
 
-    <dialog class="benefit-dialog" id="bronze-benefits" aria-labelledby="bronze-title">
-        <button class="dialog-close" type="button" aria-label="Close Bronze Membership benefits">×</button>
-        <h2 id="bronze-title">Bronze Membership Benefits</h2>
-        <p>Bronze members receive NP benefits plus:</p>
+    <dialog class="benefit-dialog" id="bronze-dialog" aria-labelledby="bronze-dialog-title">
+        <button class="dialog-close" type="button" aria-label="Close dialog">×</button>
+        <p class="eyebrow">Bronze membership</p>
+        <h2 id="bronze-dialog-title">Starter benefits</h2>
+        <p>Bronze membership helps your organization establish a local presence.</p>
         <ul>
-            <li>Enhanced directory listing</li>
-            <li>Member networking invitations</li>
-            <li>Quarterly business profile in the chamber newsletter</li>
+            <li>Directory listing</li>
+            <li>Member event access</li>
+            <li>Monthly chamber newsletter</li>
         </ul>
     </dialog>
 
-    <dialog class="benefit-dialog" id="silver-benefits" aria-labelledby="silver-title">
-        <button class="dialog-close" type="button" aria-label="Close Silver Membership benefits">×</button>
-        <h2 id="silver-title">Silver Membership Benefits</h2>
-        <p>Silver members receive Bronze benefits plus:</p>
+    <dialog class="benefit-dialog" id="silver-dialog" aria-labelledby="silver-dialog-title">
+        <button class="dialog-close" type="button" aria-label="Close dialog">×</button>
+        <p class="eyebrow">Silver membership</p>
+        <h2 id="silver-dialog-title">Growth benefits</h2>
+        <p>Silver membership offers additional opportunities to promote and grow your business.</p>
         <ul>
-            <li>Discounts on selected chamber events</li>
-            <li>Reduced pricing for business training sessions</li>
-            <li>Eligibility for a rotating home page spotlight</li>
+            <li>All Bronze benefits</li>
+            <li>Spotlight feature eligibility</li>
+            <li>Priority event registration</li>
         </ul>
     </dialog>
 
-    <dialog class="benefit-dialog" id="gold-benefits" aria-labelledby="gold-title">
-        <button class="dialog-close" type="button" aria-label="Close Gold Membership benefits">×</button>
-        <h2 id="gold-title">Gold Membership Benefits</h2>
-        <p>Gold members receive Silver benefits plus:</p>
+    <dialog class="benefit-dialog" id="gold-dialog" aria-labelledby="gold-dialog-title">
+        <button class="dialog-close" type="button" aria-label="Close dialog">×</button>
+        <p class="eyebrow">Gold membership</p>
+        <h2 id="gold-dialog-title">Leadership benefits</h2>
+        <p>Gold membership provides premium visibility and expanded engagement opportunities.</p>
         <ul>
-            <li>Priority home page spotlight placement</li>
-            <li>Preferred sponsorship opportunities</li>
-            <li>Invitations to exclusive member roundtables</li>
+            <li>All Silver benefits</li>
+            <li>Premium spotlight placement</li>
+            <li>Recognition at chamber events</li>
         </ul>
     </dialog>
 
     <footer class="site-footer">
-        <div class="footer-contact">
-            <a class="footer-brand" href="index.html">Coastal Valley Chamber</a>
+        <div class="footer-brand">
+            <strong>Coastal Valley Chamber</strong>
             <address>
-                100 Market Street<br>
-                Coastal Valley, Ghana<br>
+                123 Ocean View Road<br>
+                Accra, Ghana<br>
                 <a href="mailto:info@coastalvalleychamber.example">info@coastalvalleychamber.example</a><br>
                 <a href="tel:+233302555010">+233 30 255 5010</a>
             </address>
         </div>
-        <div class="footer-meta">
-            <p>© <span id="currentyear"></span> Coastal Valley Chamber</p>
-            <p>Saviour Agodzo | WDD 231</p>
-            <p>Last modified: <span id="lastModified"></span></p>
-        </div>
+
+        <p class="footer-meta">
+            © <span id="current-year"></span> Coastal Valley Chamber
+            <br>
+            <span id="last-modified"></span>
+        </p>
     </footer>
 </body>
 
