@@ -1,0 +1,241 @@
+:root {
+    color-scheme: light;
+    --navy: #17324d;
+    --teal: #176b67;
+    --cream: #f7f5ef;
+    --gold: #e4b65a;
+    --ink: #25313a;
+    --muted: #586773;
+    --paper: #fffefa;
+    --line: #d8dedb;
+    --heading-font: "Manrope", sans-serif;
+    --body-font: "DM Sans", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--body-font);
+    line-height: 1.65;
+}
+
+.site-header {
+    padding: clamp(2.5rem, 8vw, 5.5rem) max(1.25rem, calc((100% - 68rem) / 2));
+    background: var(--navy);
+    color: #fffefa;
+    border-bottom: 0.45rem solid var(--gold);
+}
+
+.site-label,
+.section-number {
+    margin: 0 0 0.45rem;
+    color: var(--teal);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.site-header .site-label {
+    color: #f3d58f;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--navy);
+    font-family: var(--heading-font);
+    line-height: 1.2;
+}
+
+.site-header h1 {
+    margin: 0;
+    color: #fffefa;
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    letter-spacing: -0.045em;
+}
+
+.tagline {
+    margin: 0.5rem 0 0;
+    color: #eef3f4;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+main {
+    width: min(100% - 2rem, 68rem);
+    margin: 2rem auto 4rem;
+}
+
+.plan-section {
+    margin: 0 0 1.25rem;
+    padding: clamp(1.25rem, 4vw, 2rem);
+    border: 1px solid var(--line);
+    border-radius: 0.85rem;
+    background: var(--paper);
+    box-shadow: 0 0.25rem 1rem rgb(23 50 77 / 5%);
+}
+
+.plan-section h2 {
+    margin: 0 0 0.8rem;
+    font-size: clamp(1.45rem, 4vw, 2rem);
+}
+
+.plan-section h3 {
+    margin: 1.3rem 0 0.45rem;
+    font-size: 1.1rem;
+}
+
+.plan-section p {
+    max-width: 72ch;
+}
+
+.plan-section p:last-child {
+    margin-bottom: 0;
+}
+
+.page-list,
+.scenario-list,
+.type-list {
+    padding-left: 1.3rem;
+}
+
+.page-list li,
+.scenario-list li,
+.type-list li {
+    margin: 0.65rem 0;
+    padding-left: 0.25rem;
+}
+
+.page-list li::marker,
+.scenario-list li::marker,
+.type-list li::marker {
+    color: var(--teal);
+}
+
+.color-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+    gap: 0.8rem;
+    margin: 1.2rem 0;
+    padding: 0;
+    list-style: none;
+}
+
+.color-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem;
+    border: 1px solid var(--line);
+    border-radius: 0.6rem;
+}
+
+.swatch {
+    flex: 0 0 3rem;
+    width: 3rem;
+    height: 3rem;
+    border: 1px solid rgb(0 0 0 / 12%);
+    border-radius: 0.4rem;
+}
+
+.swatch-navy {
+    background: var(--navy);
+}
+
+.swatch-teal {
+    background: var(--teal);
+}
+
+.swatch-cream {
+    background: var(--cream);
+}
+
+.swatch-gold {
+    background: var(--gold);
+}
+
+.contrast-note {
+    color: var(--muted);
+    font-size: 0.95rem;
+}
+
+.font-manrope {
+    font-family: var(--heading-font);
+}
+
+.font-dm-sans {
+    font-family: var(--body-font);
+}
+
+.wireframe-section {
+    border-top: 0.3rem solid var(--gold);
+}
+
+.wireframe-slots {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.25rem;
+}
+
+.wireframe-slot {
+    min-height: 10rem;
+    padding: 1rem;
+    border: 2px dashed var(--muted);
+    border-radius: 0.6rem;
+    background: #fff;
+}
+
+.wireframe-slot h3 {
+    margin-top: 0;
+}
+
+.wireframe-slot p {
+    color: var(--muted);
+}
+
+.wireframe-slot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0.8rem 0;
+    border: 1px solid var(--line);
+}
+
+.image-note {
+    font-size: 0.9rem;
+}
+
+code {
+    padding: 0.12rem 0.3rem;
+    border-radius: 0.25rem;
+    background: var(--cream);
+    color: var(--navy);
+    font-size: 0.9em;
+}
+
+.site-footer {
+    padding: 1.5rem 1rem;
+    background: var(--navy);
+    color: #fffefa;
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0.25rem;
+}
+
+@media (min-width: 48rem) {
+    main {
+        margin-top: 3rem;
+    }
+
+    .wireframe-slots {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
