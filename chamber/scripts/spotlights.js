@@ -4,10 +4,15 @@ const memberDataUrl = new URL("../data/members.json", document.currentScript.src
 
 function shuffle(items) {
     const shuffled = [...items];
+
     for (let index = shuffled.length - 1; index > 0; index -= 1) {
         const randomIndex = Math.floor(Math.random() * (index + 1));
-        [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+        [shuffled[index], shuffled[randomIndex]] = [
+            shuffled[randomIndex],
+            shuffled[index]
+        ];
     }
+
     return shuffled;
 }
 
@@ -27,38 +32,56 @@ function makeSpotlight(member) {
 
     const tier = document.createElement("p");
     tier.className = "spotlight-tier";
-    tier.textContent = `${["", "Silver", "Gold"][member.membership]} member`;
+    tier.textContent = `${member.membership === 3 ? "Gold" : "Silver"} member`;
 
     const details = document.createElement("address");
     details.className = "spotlight-details";
     details.append(document.createTextNode(member.address));
-    details.append(document.createElement("br"), document.createTextNode(member.phone));
+    details.append(document.createElement("br"));
+    details.append(document.createTextNode(member.phone));
 
     const website = document.createElement("a");
     website.href = member.website;
     website.target = "_blank";
     website.rel = "noopener noreferrer";
     website.textContent = member.website.replace(/^https?:\/\//, "");
-    details.append(document.createElement("br"), website);
 
+    details.append(document.createElement("br"), website);
     article.append(logo, heading, tier, details);
+
     return article;
 }
 
 async function loadSpotlights() {
     try {
         const response = await fetch(memberDataUrl);
-        if (!response.ok) throw new Error(`Member data request failed (${response.status})`);
+
+        if (!response.ok) {
+            throw new Error(`Member data request failed: ${response.status}`);
+        }
+
         const members = await response.json();
-        const eligibleMembers = shuffle(members.filter((member) => member.membership === 2 || member.membership === 3));
-        const count = Math.min(eligibleMembers.length, Math.random() < 0.5 ? 2 : 3);
 
-        if (count < 2) throw new Error("At least two silver or gold members are required for spotlights.");
+        // Membership level 2 is Silver; level 3 is Gold.
+        const eligibleMembers = shuffle(
+            members.filter((member) => member.membership === 2 || member.membership === 3)
+        );
 
-        spotlightContainer.replaceChildren(...eligibleMembers.slice(0, count).map(makeSpotlight));
-        spotlightStatus.textContent = "Featured silver and gold members";
+        const count = Math.random() < 0.5 ? 2 : 3;
+        const selectedMembers = eligibleMembers.slice(0, count);
+
+        if (selectedMembers.length < 2) {
+            throw new Error("Add at least two Silver or Gold members to members.json.");
+        }
+
+        spotlightContainer.replaceChildren(
+            ...selectedMembers.map(makeSpotlight)
+        );
+
+        spotlightStatus.textContent = "Featured Silver and Gold members";
     } catch (error) {
-        spotlightStatus.textContent = "Member spotlights could not be loaded. Check data/members.json and the member image files.";
+        spotlightStatus.textContent =
+            "Member spotlights could not be loaded. Check the member data and logo files.";
         console.error(error);
     }
 }
